@@ -8,7 +8,7 @@ var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
 var config = {
-  entryFile: './src/app.js',
+  entryFile: './src/main.js',
   outputDir: './dist',
   outputFile: 'bundle.js',
   es6Path: './src/**/*.js',
