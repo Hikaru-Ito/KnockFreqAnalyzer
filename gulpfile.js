@@ -8,10 +8,10 @@ var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
 var config = {
-  entryFile: './src/app.es6',
+  entryFile: './src/app.js',
   outputDir: './dist',
   outputFile: 'bundle.js',
-  es6Path: './src/**/*.es6',
+  es6Path: './src/**/*.js',
   sassPath: './src/style/*.scss',
   htmlPath: './src/**/*.html'
 };

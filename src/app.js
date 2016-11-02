@@ -203,7 +203,7 @@ function initialize() {
 							n: i
 						});
           }
-        }
+				}
 
 
 				var max_volume = 0;
@@ -217,14 +217,14 @@ function initialize() {
 
 
 					// ここで魔法の数式を使ってPitchを出す
-					// let maxN = max_volume.n;
-					// let freqN = maxN;
-					// if(maxN > 0 && maxN < 1023) {
-					// 	let dL = frequencyData[maxN - 1] / frequencyData[maxN];
-					// 	let dR = frequencyData[maxN + 1] / frequencyData[maxN];
-					// 	freqN += 0.5 * (dR * dR - dL * dL);
-					// }
-					// ave_frequency = freqN * fsDivN;
+					let maxN = max_volume.n;
+					let freqN = maxN;
+					if(maxN > 0 && maxN < 1023) {
+						let dL = frequencyData[maxN - 1] / frequencyData[maxN];
+						let dR = frequencyData[maxN + 1] / frequencyData[maxN];
+						freqN += 0.5 * (dR * dR - dL * dL);
+					}
+					ave_frequency = freqN * fsDivN;
 
 
 					// console.log(`最高周波数 : ${max_frequency.frequency}`);
@@ -232,11 +232,11 @@ function initialize() {
 					// console.log(`max音量周波数 : ${max_volume.frequency}`);
 					// console.log(`MagicPitch : ${ave_frequency}`);
 
-					var tn = tone.length, tf = 0;
-					for (let t of tone) {
-						tf += t.frequency;
-					}
-					ave_frequency = tf/tn;
+					// var tn = tone.length, tf = 0;
+					// for (let t of tone) {
+					// 	tf += t.frequency;
+					// }
+					// ave_frequency = tf/tn;
 
 
         } else {
