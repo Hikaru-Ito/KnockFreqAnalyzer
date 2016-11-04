@@ -6,9 +6,25 @@
 <title>MagicalKnock - FreqAnalyzer</title>
 </head>
 <body>
+  <h3>RMS</h3>
   <canvas id="rms_graph" style="background:#EDF1F2;"></canvas>
-  <canvas id="mfcc_graph" style="background:#EDF1F2;"></canvas>
-
+  <h3>MFCC(メル周波数ケプストラム係数)</h3>
+  <canvas id="mfcc_graph" style="background:#2c3e50;"></canvas>
+  <div class="buttons">
+    <button id="startSVMTraing">SVM学習開始</button>
+    <button id="startNNTraing">NeuralNetwork学習開始</button>
+    <button id="clearTraingData">教師データクリア</button>
+    <button id="trainDataToJson">教師データJSON書き出し</button>
+    <input type="radio" name="classifier" value="svm"> SVM
+    <input type="radio" name="classifier" value="nn" checked> NeuralNetwork
+  </div>
+  <div id="console">
+    <span class="status"></span>
+    <p class="train_data_type0">教師データ数[Type 0] : <span>0</span></p>
+    <p class="train_data_type1">教師データ数[Type 1] : <span>0</span></p>
+    <p>MFCC次元数 10 (元次元24)</p>
+  </div>
+  <textarea cols="90" rows="30" id="json" ></textarea>
   <script src="bundle.js"></script>
 </body>
 </html>
