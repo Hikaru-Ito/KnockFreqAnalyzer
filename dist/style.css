@@ -1,0 +1,27 @@
+#frequency, #knocks_graph {
+  margin: 10px auto;
+  display: block; }
+
+#decision {
+  background: #eee; }
+
+#knocks {
+  width: 90%;
+  text-align: center; }
+
+#knocks canvas {
+  display: inline-block;
+  margin: 16px;
+  border-radius: 10px; }
+
+#command {
+  margin-left: 24px; }
+
+h3 {
+  color: #333;
+  font-size: 14px; }
+
+#console {
+  padding: 16px;
+  font-size: 14px;
+  color: #444; }
